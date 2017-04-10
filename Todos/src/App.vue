@@ -1,17 +1,27 @@
 <template>
   <div id="app">
+  	<carousel>
+  		<carousel-slide>
+  			<img src="http://lorempicsum.com/futurama/630/300/1" alt="">
+  		</carousel-slide>
+  		<carousel-slide>
+  			<img src="http://lorempicsum.com/futurama/630/300/2" alt="">
+  		</carousel-slide>
+  	</carousel>
     <todos></todos>
   </div>
 </template>
 
 <script>
-import Todos from './components/Todos'
+import todos from './components/Todos'
+import carousel from './components/carousel/carousel'
+import carouselSlide from './components/carousel/carouselSlide'
 
 export default {
-  name: 'app',
   components: {
-    Todos
+    todos,
+    carousel,
+    carouselSlide
   }
 }
 </script>
-
