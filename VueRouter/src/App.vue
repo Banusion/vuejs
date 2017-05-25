@@ -1,7 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <router-link :to="{name: 'root'}" class="header item">Acceuil</router-link>
+        <router-link :to="{name: 'pageA'}" class="item">Page A</router-link>
+        <router-link :to="{name: 'post', params: {id: 1}}" class="item">Article</router-link>
+      </div>
+    </div>
+    <div class="sidebar">
+      <h1>Sidebar</h1>
+      <router-view name="sidebar"></router-view>
+    </div>
+    <div class="main">
+      <h1>Main</h1>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -10,14 +23,3 @@ export default {
   name: 'app'
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
