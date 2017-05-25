@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <a :href="'http://lorempicsum.com/simpsons/800/600/' + n" v-lightbox v-for="n in 9">
+      <img :src="'http://lorempicsum.com/simpsons/150/150/' + n">
+    </a>
+    <lightbox></lightbox>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Lightbox from './components/lightbox/Lightbox.vue'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Lightbox
   }
 }
 </script>
